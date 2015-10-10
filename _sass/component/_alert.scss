@@ -1,0 +1,52 @@
+/*
+.c-alert {}
+  --mute {}
+  --info {}
+  --success {}
+  --warning {}
+  --danger {}
+  
+  .c-alert-text {}
+*/
+
+.c-alert {
+  border-radius: $border-radius-rounded;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+  
+  .c-alert--info {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-info;
+    background-color: rgba($color-info, 0.1);
+  }
+  
+  .c-alert--success {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-success;
+    background-color: rgba($color-green, 0.1);
+  }
+  
+  .c-alert--warning {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-warning;
+    background-color: rgba($color-warning, 0.1);
+  }
+  
+  .c-alert--danger {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-danger;
+    background-color: rgba($color-danger, 0.1);
+  }
+  
+  .c-alert-text {
+    color: $color-text;
+    font-size: $font-size-small;
+    line-height: 1.4;
+  }

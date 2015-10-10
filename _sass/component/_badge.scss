@@ -1,0 +1,76 @@
+/*
+.c-badge {}
+  --small {}
+  --medium {}
+  
+  --mute {}
+  --info {}
+  --success {}
+  --warning {}
+  --danger {}
+*/
+
+.c-badge {
+  border-radius: $border-radius-circle;
+  color: $color-text;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+  .c-badge:empty {
+    display: none;
+  }
+  
+  .c-badge--small {
+    font-size: $font-size-x-small;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .c-badge--medium {
+    font-size: $font-size-small;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .c-badge--plain {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-grey-light;
+    background-color: $color-white;
+  }
+  
+  .c-badge--info {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-info;
+    background-color: rgba($color-info, 0.1);
+  }
+  
+  .c-badge--success {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-success;
+    background-color: rgba($color-green, 0.1);
+  }
+  
+  .c-badge--warning {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-warning;
+    background-color: rgba($color-warning, 0.1);
+  }
+  
+  .c-badge--danger {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-danger;
+    background-color: rgba($color-danger, 0.1);
+  }

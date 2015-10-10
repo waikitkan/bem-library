@@ -1,0 +1,317 @@
+/*
+.c-btn-group {}
+
+  .c-btn {}
+    --small {}
+    --medium {}
+    --large {}
+  
+    --block {}
+  
+    --link-info {}
+      --link-info.is-disabled,
+      --link-info[disabled] {}
+      --to-info {}
+        --link-info--to-info.is-disabled,
+        --link-info--to-info[disabled] {}
+    --link-danger {}
+      --link-danger.is-disabled,
+      --link-danger[disabled] {}
+      --to-danger {}
+        --link-danger--to-danger.is-disabled,
+        --link-danger--to-danger[disabled] {}
+    
+    --mute/default {}
+      --mute/default.is-active {}
+      --mute/default.is-disabled,
+      --mute/default[disabled] {}
+      --to-info {}
+      --to-success {}
+      --to-danger {}
+    --info {}
+      --info.is-active {}
+      --info.is-disabled,
+      --info[disabled] {}
+    --success {}
+      --success.is-active {}
+      --success.is-disabled,
+      --success[disabled] {}
+    --danger {}
+      --danger.is-active {}
+      --danger.is-disabled,
+      --danger[disabled] {}
+  
+    .c-btn.is-disabled,
+    .c-btn[disabled] {}
+*/
+
+.c-btn-group {
+  display: inline-flex;
+}
+
+  .c-btn-group .c-btn {
+    border-radius: 0;
+    margin-left: -1px;
+  }
+  
+    .c-btn-group .c-btn:first-child {
+      border-top-left-radius: $border-radius-rounded;
+      border-bottom-left-radius: $border-radius-rounded;
+    }
+    
+    .c-btn-group .c-btn:last-child {
+      border-top-right-radius: $border-radius-rounded;
+      border-bottom-right-radius: $border-radius-rounded;
+    }
+  
+  .c-btn {
+    background: inherit;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: $border-radius-rounded;
+    color: $color-link;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+    
+    .c-btn:hover,
+    .c-btn:focus,
+    .c-btn.is-active {
+      box-shadow: $box-shadow-light;
+      text-decoration: none;
+    }
+    
+    .c-btn.is-disabled,
+    .c-btn[disabled] {
+      box-shadow: none;
+      cursor: default;
+      opacity: 0.5;
+    }
+    
+    // size
+    
+    .c-btn--small {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .c-btn--medium {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .c-btn--large {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    // type
+    
+    .c-btn--block {
+      display: block;
+      width: 100%;
+    }
+    
+    .c-btn--link-info {
+      color: $color-link;
+      font-weight: $font-weight-normal;
+    }
+    
+      .c-btn--link-info:hover,
+      .c-btn--link-info:focus {
+        box-shadow: none;
+        text-decoration: underline;
+      }
+      
+      .c-btn--link-info:active {
+        border-color: transparent;
+      }
+      
+      .c-btn--link-info.is-disabled,
+      .c-btn--link-info[disabled] {
+        text-decoration: none;
+      }
+      
+      .c-btn--link-info--to-info:hover,
+      .c-btn--link-info--to-info:focus {
+        border-color: darken($color-info, 15%);
+        background-color: darken($color-info, 5%);
+        color: $color-white;
+        text-decoration: none;
+      }
+      
+      .c-btn--link-info--to-info.is-disabled,
+      .c-btn--link-info--to-info[disabled] {
+        border-color: transparent;
+        background-color: transparent;
+        color: $color-link;
+      }
+      
+    .c-btn--link-danger {
+      color: $color-danger;
+      font-weight: $font-weight-normal;
+    }
+    
+      .c-btn--link-danger:hover,
+      .c-btn--link-danger:focus {
+        box-shadow: none;
+        text-decoration: underline;
+      }
+      
+      .c-btn--link-danger:active {
+        border-color: transparent;
+      }
+      
+      .c-btn--link-danger.is-disabled,
+      .c-btn--link-danger[disabled] {
+        text-decoration: none;
+      }
+      
+      .c-btn--link-danger--to-danger:hover,
+      .c-btn--link-danger--to-danger:focus {
+        border-color: darken($color-danger, 15%);
+        background-color: darken($color-danger, 5%);
+        color: $color-white;
+        text-decoration: none;
+      }
+      
+      .c-btn--link-danger--to-danger.is-disabled,
+      .c-btn--link-danger--to-danger[disabled] {
+        border-color: transparent;
+        background-color: transparent;
+        color: $color-danger;
+      }
+    
+    // color
+    
+    .c-btn--mute,
+    .c-btn--default {
+      border-color: $color-grey-light;
+      background-color: $color-mute;
+      color: $color-text;
+    }
+    
+      .c-btn--mute:hover,
+      .c-btn--mute:focus,
+      .c-btn--mute.is-active,
+      .c-btn--default:hover,
+      .c-btn--default:focus,
+      .c-btn--default.is-active {
+        border-color: darken($color-grey-light, 5%);
+        background-color: darken($color-mute, 5%);
+      }
+      
+      .c-btn--mute.is-disabled,
+      .c-btn--mute[disabled],
+      .c-btn--default.is-disabled,
+      .c-btn--default[disabled] {
+        border-color: darken($color-grey-light, 10%);
+        background-color: $color-mute;
+        color: $color-text;
+      }
+      
+      .c-btn--mute--to-info:hover,
+      .c-btn--mute--to-info:focus,
+      .c-btn--default--to-info:hover,
+      .c-btn--default--to-info:focus {
+        border-color: darken($color-info, 15%);
+        background-color: darken($color-info, 5%);
+        color: $color-white;
+      }
+      
+      .c-btn--mute--to-success:hover,
+      .c-btn--mute--to-success:focus,
+      .c-btn--default--to-success:hover,
+      .c-btn--default--to-success:focus {
+        border-color: darken($color-success, 15%);
+        background-color: darken($color-success, 5%);
+        color: $color-white;
+      }
+      
+      .c-btn--mute--to-danger:hover,
+      .c-btn--mute--to-danger:focus,
+      .c-btn--default--to-danger:hover,
+      .c-btn--default--to-danger:focus {
+        border-color: darken($color-danger, 15%);
+        background-color: darken($color-danger, 5%);
+        color: $color-white;
+      }
+    
+    .c-btn--info {
+      border-color: darken($color-info, 10%);
+      background-color: $color-info;
+      color: $color-white;
+    }
+    
+      .c-btn--info:hover,
+      .c-btn--info:focus,
+      .c-btn--info.is-active {
+        border-color: darken($color-info, 15%);
+        background-color: darken($color-info, 5%);
+      }
+      
+      .c-btn--info.is-disabled,
+      .c-btn--info[disabled] {
+        border-color: darken($color-info, 10%);
+        background-color: $color-info;
+        color: $color-white;
+      }
+      
+    .c-btn--success {
+      border-color: darken($color-success, 10%);
+      background-color: $color-success;
+      color: $color-white;
+    }
+    
+      .c-btn--success:hover,
+      .c-btn--success:focus,
+      .c-btn--success.is-active {
+        border-color: darken($color-success, 15%);
+        background-color: darken($color-success, 5%);
+      }
+      
+      .c-btn--success.is-disabled,
+      .c-btn--success[disabled] {
+        border-color: darken($color-success, 10%);
+        background-color: $color-success;
+        color: $color-white;
+      }
+    
+    .c-btn--danger {
+      border-color: darken($color-danger, 10%);
+      background-color: $color-danger;
+      color: $color-white;
+    }
+    
+      .c-btn--danger:hover,
+      .c-btn--danger:focus,
+      .c-btn--danger.is-active {
+        border-color: darken($color-danger, 15%);
+        background-color: darken($color-danger, 5%);
+      }
+      
+      .c-btn--danger.is-disabled,
+      .c-btn--danger[disabled] {
+        border-color: darken($color-danger, 10%);
+        background-color: $color-danger;
+        color: $color-white;
+      }

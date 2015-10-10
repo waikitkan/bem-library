@@ -1,0 +1,122 @@
+/*
+.c-speech {}
+  --top-left {}
+  --bottom-left {}
+  --top-right {}
+  --bottom-right {}
+  
+  .c-speech.is-speaking {}
+  
+  .c-speech-header {}
+  
+  .c-speech-body {}
+  
+  .c-speech-footer {}
+*/
+
+.c-speech {
+  max-width: 400px;
+}
+  
+  .c-speech.is-speaking {}
+  
+  .c-speech-header {}
+  
+  .c-speech-body {
+    background-color: $color-ash;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-border;
+    border-radius: $border-radius-rounded-double;
+    color: $color-text;
+    font-size: $font-size-small;
+    line-height: 1.4;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+    .c-speech-body:before,
+    .c-speech-body:after {
+      content: "";
+      position: absolute;
+      background-color: $color-ash;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $color-border;
+      border-radius: $border-radius-circle;
+    }
+    
+    // speech direction
+    
+    .c-speech-body:before {
+      height: 10px;
+      width: 10px;
+    }
+    
+    .c-speech-body:after {
+      height: 5px;
+      width: 5px;
+    }
+    
+    .c-speech--top-left .c-speech-body:before {
+      top: -5px;
+      left: -5px;
+    }
+    
+    .c-speech--top-left .c-speech-body:after {
+      top: -10px;
+      left: -10px;
+    }
+    
+    .c-speech--top-right .c-speech-body:before {
+      top: -5px;
+      right: -5px;
+    }
+    
+    .c-speech--top-right .c-speech-body:after {
+      top: -10px;
+      right: -10px;
+    }
+    
+    .c-speech--bottom-left .c-speech-body:before {
+      bottom: -5px;
+      left: -5px;
+    }
+    
+    .c-speech--bottom-left .c-speech-body:after {
+      bottom: -10px;
+      left: -10px;
+    }
+    
+    .c-speech--bottom-right .c-speech-body:before {
+      bottom: -5px;
+      right: -5px;
+    }
+    
+    .c-speech--bottom-right .c-speech-body:after {
+      bottom: -10px;
+      right: -10px;
+    }
+  
+  .c-speech-footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+    .c-speech-footer .u-text {
+      color: $color-grey-light;
+    }
+    
+     .c-speech:hover .c-speech-footer .u-text {
+        color: $color-text;
+      } 
+      
+    .c-speech--top-right .c-speech-footer,
+    .c-speech--bottom-right .c-speech-footer {
+      display: flex;
+      justify-content: flex-end;
+    }

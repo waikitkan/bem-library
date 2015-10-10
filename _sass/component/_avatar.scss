@@ -1,0 +1,40 @@
+/*
+.c-avatar {}
+  --small {}
+  --medium {}
+  --large {}
+  
+  --rounded {}
+  --bubble {}
+*/
+
+.c-avatar {
+  display: inline-block;
+}
+  
+  // side
+  
+  .c-avatar--small {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .c-avatar--medium {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .c-avatar--large {
+    height: 50px;
+    width: 50px;
+  }
+  
+  // style
+  
+  .c-avatar--rounded {
+    border-radius: $border-radius-rounded;
+  }
+  
+  .c-avatar--bubble {
+    border-radius: $border-radius-circle;
+  }

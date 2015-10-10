@@ -1,0 +1,36 @@
+$color-blue: #2EA8E6;
+  $color-blue-light: lighten($color-blue, 20%);
+  $color-blue-dark: darken($color-blue, 20%);
+
+$color-green: #29CC96;
+  $color-green-light: lighten($color-green, 20%);
+  $color-green-dark: darken($color-green, 20%);
+
+$color-yellow: #FFBB33;
+  $color-yellow-light: lighten($color-yellow, 20%);
+  $color-yellow-dark: darken($color-yellow, 20%);
+
+$color-red: #E65C2E;
+  $color-red-light: lighten($color-red, 20%);
+  $color-red-dark: darken($color-red, 20%);
+
+$color-black: #4D4D4D;
+  $color-grey-light: #C7D3D8;
+  $color-grey-dark: #667780;
+  
+$color-white: #FFFFFF;
+$color-ash: #FAFAFA;
+
+$color-brand: $color-blue;
+$color-disabled: $color-ash;
+
+$color-heading: $color-black;
+$color-text: $color-grey-dark;
+$color-link: $color-brand;
+$color-border: $color-grey-light;
+
+$color-mute: $color-ash;
+$color-info: $color-blue;
+$color-success: $color-green;
+$color-danger: $color-red;
+$color-warning: $color-yellow;

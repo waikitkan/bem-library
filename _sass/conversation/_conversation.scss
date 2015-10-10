@@ -1,0 +1,119 @@
+/*
+.c-conversation {}
+
+  .c-speaker {}
+    --top-left {}
+    --bottom-left {}
+    --top-right {}
+    --bottom-right {}
+    
+    .c-speaker.is-speaking {}
+    
+    .c-speaker-avatar {}
+    
+    .c-speaker-speech {}
+*/
+
+.c-conversation {}
+
+  .c-speaker {
+    margin-bottom: 20px;
+  }
+    
+    // speaker direction
+    
+    .c-speaker--top-left {
+      flex-direction: row;
+      margin-right: 60px;
+    }
+    
+      .c-speaker--top-left .c-speech-body:before {
+        top: -5px;
+        left: -5px;
+      }
+      
+      .c-speaker--top-left .c-speech-body:after {
+        top: -10px;
+        left: -10px;
+      }
+    
+      .c-speaker--top-left .c-speaker-avatar {
+        margin-right: 20px;
+      }
+      
+      .c-speaker--top-left .c-speaker-speech {
+        margin-top: 20px;
+      }
+  
+    .c-speaker--top-right {
+      flex-direction: row-reverse;
+      margin-left: 60px;
+    }
+      
+      .c-speaker--top-right .c-speech-body:before {
+        top: -5px;
+        right: -5px;
+      }
+      
+      .c-speaker--top-right .c-speech-body:after {
+        top: -10px;
+        right: -10px;
+      }
+      
+      .c-speaker--top-right .c-speaker-avatar {
+        margin-left: 20px;
+      }
+      
+      .c-speaker--top-right .c-speaker-speech {
+        margin-top: 20px;
+      }
+      
+      .c-speaker--top-right .c-speech-footer {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+    .c-speaker--bottom-left {
+      flex-direction: row;
+      align-items: flex-end;
+      margin-right: 60px;
+    }
+    
+      .c-speaker--bottom-left .c-speech-body:before {
+        bottom: -5px;
+        left: -5px;
+      }
+      
+      .c-speaker--bottom-left .c-speech-body:after {
+        bottom: -10px;
+        left: -10px;
+      }
+      
+      .c-speaker--bottom-left .c-speaker-avatar {
+        margin-right: 20px;
+      }
+      
+    .c-speaker--bottom-right {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      margin-left: 60px;
+    }
+    
+      .c-speaker--bottom-right .c-speech-body:before {
+        bottom: -5px;
+        right: -5px;
+      }
+      
+      .c-speaker--bottom-right .c-speech-body:after {
+        bottom: -10px;
+        right: -10px;
+      }
+      
+      .c-speaker--bottom-right .c-speaker-avatar {
+        margin-left: 20px;
+      }
+      
+      .c-speaker--bottom-right .c-speech-footer {
+        display: flex;
+        justify-content: flex-end;
+      }

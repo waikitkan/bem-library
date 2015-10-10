@@ -1,0 +1,53 @@
+/*
+.c-progress {}
+  --small {}
+  --medium {}
+  --large {}
+  
+  .c-progress-bar {}
+    --info {}
+    --success {}
+    --warning {}
+    --danger {}
+*/
+
+.c-progress {
+  background-color: $color-grey-light;
+  border-radius: $border-radius-circle;
+  display: block;
+  position: relative;
+}
+
+  .c-progress--small {
+    height: 5px;
+  }
+  
+  .c-progress--medium {
+    height: 10px;
+  }
+  
+  .c-progress--large {
+    height: 15px;
+  }
+  
+  .c-progress-bar {
+    border-radius: $border-radius-circle;
+    position: absolute;
+    height: 100%;
+  }
+  
+    .c-progress-bar--info {
+      background-color: $color-info;
+    }
+    
+    .c-progress-bar--success {
+      background-color: $color-success;
+    }
+    
+    .c-progress-bar--warning {
+      background-color: $color-warning;
+    }
+    
+    .c-progress-bar--danger {
+      background-color: $color-danger;
+    }

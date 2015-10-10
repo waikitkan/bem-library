@@ -1,0 +1,55 @@
+/*
+.c-breadcrumb {}
+  --small {}
+  --medium {}
+  --large {}
+  
+  .c-breadcrumb-item {}
+    
+    .c-breadcrumb-link {}
+    
+    .c-breadcrumb-text {}
+*/
+
+.c-breadcrumb {}
+  
+  .c-breadcrumb-item {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    margin-right: 30px;
+  }
+  
+    .c-breadcrumb-item::after {
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      color: $color-grey-light;
+    }
+    
+      .c-breadcrumb-item:last-child::after {
+        content: "";
+      }
+    
+    .c-breadcrumb-link {
+      display: block;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  
+    .c-breadcrumb-text {
+      color: $color-text;
+    }
+  
+  .c-breadcrumb--small .c-breadcrumb-item {
+    font-size: $font-size-small;
+  }
+  
+  .c-breadcrumb--medium .c-breadcrumb-item {
+    font-size: $font-size-normal;
+  }
+  
+  .c-breadcrumb--large .c-breadcrumb-item {
+    font-size: $font-size-large;
+  }

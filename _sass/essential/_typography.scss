@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-heading;
+  font-size: $font-size-large;
+  font-weight: $font-weight-normal;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: $color-brand;
+  text-decoration: none;
+}
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
